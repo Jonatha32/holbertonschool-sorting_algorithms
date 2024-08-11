@@ -24,6 +24,7 @@ int partition(int arr[], int left, int right, size_t size)
 int a = arr[right];
 int b = (left - 1);
 int c = left;
+
 while (c < right)
 {
 if (arr[c] < a)
@@ -37,14 +38,13 @@ print_array(arr, size);
 }
 c++;
 }
-if (arr[b + 1])
+if (arr[b + 1] != arr[right])
 {
 swap(&arr[b + 1], &arr[right]);
 print_array(arr, size);
 }
 return (b + 1);
 }
-
 /**
  * recursive_quick_sort - recursion
  * @arr: parameter
